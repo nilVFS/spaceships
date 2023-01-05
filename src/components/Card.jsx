@@ -19,8 +19,8 @@ function Card(props) {
         {ship.diameter && <p>Диаметр: <span>{ship.diameter}</span></p>}
         {ship.start_mass && <p>Стартовая масса: <span>{ship.start_mass}</span></p>}
         {ship.fuel_type && <p>Тип топлива: <span>{ship.fuel_type}</span></p>}
-        {ship.fuel_supply && <p><span>Резервное топливо: {ship.fuel_supply}</span></p>}
-        {ship.engine_thrust && <p><span>Тяга: {ship.engine_thrust}</span></p>}
+        {ship.fuel_supply && <p>Резервное топливо: <span>{ship.fuel_supply}</span></p>}
+        {ship.engine_thrust && <p>Тяга: <span>{ship.engine_thrust}</span></p>}
         {ship.no_flights && <p>Полетов: <span>{ship.no_flights}</span></p>}
         {ship.no_stages && <p>Ступений: <span>{ship.no_stages}</span></p>}
         {ship.max_distance && <p>Максимальная дистанция: <span>{ship.max_distance}</span></p>}
