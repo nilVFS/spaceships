@@ -5,7 +5,7 @@ function Header(props) {
   return (
     <header>
           <Form value={props.value} onInputChange={props.onInputChange} />
-          <h2 className="title">{props.name}</h2>
+          <h2 className="title glass">{props.name}</h2>
     </header>
   )
 }

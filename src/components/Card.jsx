@@ -1,11 +1,12 @@
 function Card(props) {
   const ship = props.ship
+
   return (
     <main className='main'>
       <div className="image-wrapper">
         <img src={ship.image} alt={ship.name} />
       </div>
-      <div className="description">
+      <div className="specifications glass">
         {ship.establishment_date && <p>Дата создания: <span>{ship.establishment_date}</span></p>}
         {ship.location && <p>Расположение: <span>{ship.location}</span></p>}
         {ship.area && <p>Площадь: <span>{ship.area}</span></p>}
@@ -26,10 +27,10 @@ function Card(props) {
         {ship.space_tugs && <p>Разгонных блоков: <span>{ship.space_tugs.map(tug => tug + " ")}</span></p>}
       </div>
 
-      <button className="prev-slide" onClick={props.sub}>Назад</button>
-      <button className="next-slide" onClick={props.add}>Далее</button>
+      <button className="prev-slide glass" onClick={props.sub}>Назад</button>
+      <button className="next-slide glass" onClick={props.add}>Далее</button>
 
-      <div className="descrip">
+      <div className="description glass">
         <p>{ship.description}</p>
       </div>
     </main>

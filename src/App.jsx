@@ -22,6 +22,7 @@ function App() {
       setCount(0)
     }
   }
+  
   function sub() {
     if (count <= 0) {
       setCount(ships[`${category}`].length - 1)
@@ -29,6 +30,18 @@ function App() {
       setCount(prev => prev - 1)
     }
   }
+
+  function handleKeyPress(event) {
+    if(event.key === "ArrowRight"){
+      add();
+    } else if (event.key === "ArrowLeft") {
+      sub();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress)
+  }, [ship])
 
   return (
     <div className="App">
